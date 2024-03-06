@@ -6,6 +6,11 @@ public class SemaphoreEx {
 
     public static void main(String[] args) {
         Semaphore callBox = new Semaphore(2);
+        new Person("Yehor", callBox);
+        new Person("John", callBox);
+        new Person("Mike", callBox);
+        new Person("Josh", callBox);
+        new Person("Viktor", callBox);
     }
 }
 
@@ -16,6 +21,7 @@ class Person extends Thread {
     public Person(String name, Semaphore callBox) {
         this.name = name;
         this.callBox = callBox;
+        this.start();
     }
 
     @Override
