@@ -9,25 +9,34 @@ public class CountDownLatchEx {
         Thread.sleep(2000);
         System.out.println("Market stuff came to work");
         countDownLatch.countDown();
-        System.out.println("CountDownLatch= " + countDownLatch.getCount());
+        System.out.println("CountDownLatch = " + countDownLatch.getCount());
     }
 
     private static void everythingIsReady() throws InterruptedException {
         Thread.sleep(3000);
         System.out.println("Everything is ready, so let's open market");
         countDownLatch.countDown();
-        System.out.println("CountDownLatch= " + countDownLatch.getCount());
+        System.out.println("CountDownLatch = " + countDownLatch.getCount());
     }
 
     private static void openMarket() throws InterruptedException {
         Thread.sleep(4000);
         System.out.println("Market is opened");
         countDownLatch.countDown();
-        System.out.println("CountDownLatch= " + countDownLatch.getCount());
+        System.out.println("CountDownLatch = " + countDownLatch.getCount());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        new Friend("John", countDownLatch);
+        new Friend("Mike", countDownLatch);
+        new Friend("Sean", countDownLatch);
+        new Friend("Aaron", countDownLatch);
+        new Friend("Josh", countDownLatch);
+        new Friend("Will", countDownLatch);
 
+        marketStuffIsOnPlace();
+        everythingIsReady();
+        openMarket();
     }
 }
 
