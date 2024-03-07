@@ -1,5 +1,6 @@
 package com.yehor.lessons.exchanger;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Exchanger;
 
@@ -7,6 +8,20 @@ public class ExchangerEx {
 
     public static void main(String[] args) {
 
+        Exchanger<Action> exchanger = new Exchanger<>();
+
+        List<Action> friend1Action = new ArrayList<>();
+        friend1Action.add(Action.SCISSORS);
+        friend1Action.add(Action.PAPER);
+        friend1Action.add(Action.SCISSORS);
+
+        List<Action> friend2Action = new ArrayList<>();
+        friend2Action.add(Action.PAPER);
+        friend2Action.add(Action.STONE);
+        friend2Action.add(Action.STONE);
+
+        new BestFriend("George", friend1Action, exchanger);
+        new BestFriend("Carl", friend2Action, exchanger);
     }
 }
 
@@ -23,6 +38,7 @@ class BestFriend extends Thread {
         this.name = name;
         this.myActions = myActions;
         this.exchanger = exchanger;
+        this.start();
     }
 
     private void whoWins(Action myAction, Action friendAction) {
