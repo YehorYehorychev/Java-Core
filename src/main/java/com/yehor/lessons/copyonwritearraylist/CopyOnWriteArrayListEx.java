@@ -2,11 +2,12 @@ package com.yehor.lessons.copyonwritearraylist;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CopyOnWriteArrayListEx {
 
     public static void main(String[] args) throws InterruptedException {
-        ArrayList<String> list = new ArrayList<>();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
         list.add("Yehor");
         list.add("Mike");
         list.add("Phill");
