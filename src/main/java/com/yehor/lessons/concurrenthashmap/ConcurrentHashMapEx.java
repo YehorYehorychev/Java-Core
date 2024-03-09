@@ -2,11 +2,12 @@ package com.yehor.lessons.concurrenthashmap;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashMapEx {
 
     public static void main(String[] args) throws InterruptedException {
-        HashMap<Integer, String> map = new HashMap<>();
+        ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
         map.put(1, "Yehor");
         map.put(2, "Aaron");
         map.put(3, "Will");
