@@ -1,5 +1,7 @@
 package com.yehor.lessons.threadstask;
 
+import java.util.stream.IntStream;
+
 /**
  * Russian:
  * 1.  Задан массив случайных целых чисел (от 1 до 300)
@@ -19,5 +21,18 @@ public class Task2 {
 
     public static void main(String[] args) {
 
+    }
+
+    private static int findMax(int[] values) {
+        return IntStream.of(values)
+                .max()
+                .orElse(Integer.MIN_VALUE);
+    }
+
+    private static int findMaxParallel(int[] values) {
+        return IntStream.of(values)
+                .parallel()
+                .max()
+                .orElse(Integer.MIN_VALUE);
     }
 }
