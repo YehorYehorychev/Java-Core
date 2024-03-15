@@ -7,12 +7,14 @@ public class Employees implements Serializable {
     String department;
     int age;
     double salary;
+    Car car;
 
-    public Employees(String name, String department, int age, double salary) {
+    public Employees(String name, String department, int age, double salary, Car car) {
         this.name = name;
         this.department = department;
         this.age = age;
         this.salary = salary;
+        this.car = car;
     }
 
     @Override
@@ -22,6 +24,7 @@ public class Employees implements Serializable {
                 ", department='" + department + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
+                ", car =" + car +
                 '}';
     }
 }
