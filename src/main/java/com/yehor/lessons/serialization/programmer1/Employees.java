@@ -1,6 +1,8 @@
 package com.yehor.lessons.serialization.programmer1;
 
-public class Employees {
+import java.io.Serializable;
+
+public class Employees implements Serializable {
     String name;
     String department;
     int age;
