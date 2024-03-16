@@ -1,4 +1,4 @@
-What is prose, and how is it different to poetry?
+Hello World! , and how is it different to poetry?
 The short answer is that prose is the form of writing
 that I’m using now, and the form we most commonly use
 in speech with each other. Prose is the term for any
@@ -8,4 +8,5 @@ consistent rhythm.
 Poetry or verse is different: verse has a set
 rhythm (or meter), and it looks distinctive
 on the page as the lines are usually shorter
-than prose.
+than prose
+ 	 	 	 	 	 James Butler Jr

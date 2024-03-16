@@ -16,6 +16,16 @@ public class RandomAccessFileEx {
             file.seek(80);
             String s2 = file.readLine();
             System.out.println(s2);
+
+            long filePointer = file.getFilePointer();
+            System.out.println(filePointer);
+
+//            file.seek(0);
+//            file.writeBytes("Hello World!");
+            file.seek(file.length() - 1);
+            file.writeBytes("\n \t \t \t \t \t James Butler Jr.");
+
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
