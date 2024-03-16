@@ -2,6 +2,7 @@ package com.yehor.lessons.file;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FileEx {
 
@@ -32,5 +33,11 @@ public class FileEx {
 
         System.out.println("New file created: " + file2.createNewFile());
         System.out.println("---------------------------------------");
+
+        System.out.println("File2: " + file2.length());
+        System.out.println("---------------------------------------");
+
+        File[] files = folder.listFiles();
+        System.out.println(Arrays.toString(files));
     }
 }
