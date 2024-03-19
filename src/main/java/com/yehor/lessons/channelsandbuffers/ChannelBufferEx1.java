@@ -29,9 +29,11 @@ public class ChannelBufferEx1 {
             String text = "\n His palms are sweaty, knees weak, arms are heavy\n" +
                     "There's vomit on his sweater already, mom's spaghetti\n" +
                     "He's nervous, but on the surface, he looks calm and ready\n";
-            ByteBuffer buffer2 = ByteBuffer.allocate(text.getBytes().length);
-            buffer2.put(text.getBytes());
-            buffer2.flip();
+//            ByteBuffer buffer2 = ByteBuffer.allocate(text.getBytes().length);
+//            buffer2.put(text.getBytes());
+//            buffer2.flip();
+//            channel.write(buffer2);
+            ByteBuffer buffer2 = ByteBuffer.wrap(text.getBytes());
             channel.write(buffer2);
 
         } catch (FileNotFoundException e) {
