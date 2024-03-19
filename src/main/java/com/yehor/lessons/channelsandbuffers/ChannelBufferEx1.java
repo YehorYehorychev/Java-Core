@@ -25,6 +25,9 @@ public class ChannelBufferEx1 {
                 byteRead = channel.read(buffer);
             }
             System.out.println(stringBuilder);
+            String text = "\n His palms are sweaty, knees weak, arms are heavy\n" +
+                    "There's vomit on his sweater already, mom's spaghetti\n" +
+                    "He's nervous, but on the surface, he looks calm and ready\n";
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
