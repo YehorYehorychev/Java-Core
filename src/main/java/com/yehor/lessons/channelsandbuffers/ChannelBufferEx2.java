@@ -18,6 +18,15 @@ public class ChannelBufferEx2 {
             System.out.println((char) buffer.get());
             System.out.println((char) buffer.get());
             System.out.println((char) buffer.get());
+            buffer.rewind();
+            System.out.println((char) buffer.get());
+            System.out.println("------------------------");
+            buffer.compact();
+            channel.read(buffer);
+            buffer.flip();
+            while (buffer.hasRemaining()) {
+                System.out.println((char) buffer.get());
+            }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
