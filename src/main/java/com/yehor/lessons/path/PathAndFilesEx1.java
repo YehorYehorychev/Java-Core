@@ -21,6 +21,14 @@ public class PathAndFilesEx1 {
         System.out.println("filePath.isAbsolute(): " + filePath.isAbsolute());
         System.out.println("directoryPath.isAbsolute(): " + directoryPath.isAbsolute());
         System.out.println("----------------------------------------");
-
+        System.out.println("filePath.toAbsolutePath(): " + filePath.toAbsolutePath());
+        System.out.println("directoryPath.toAbsolutePath: " + directoryPath.toAbsolutePath());
+        System.out.println("----------------------------------------");
+        System.out.println("filePath.toAbsolutePath().getParent()): " + filePath.toAbsolutePath().getParent());
+        System.out.println("directoryPath.toAbsolutePath().getParent()): " + directoryPath.toAbsolutePath().getParent());
+        System.out.println("----------------------------------------");
+        System.out.println("filePath.toAbsolutePath().getParent()): " + filePath.toAbsolutePath().getParent());
+        System.out.println("directoryPath.resolve(filePath): " + directoryPath.resolve(filePath));
+        System.out.println("----------------------------------------");
     }
 }
