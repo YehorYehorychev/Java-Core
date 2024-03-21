@@ -18,7 +18,11 @@ public class PathAndFilesEx2 {
 //        System.out.println("Done!");
 //        Files.copy(directoryFolderPath, directoryPath.resolve("Folder"));
 //
-        Files.move(Paths.get("files/test10.txt"), (Paths.get("files/test11.txt")));
+//        Files.move(Paths.get("files/test10.txt"), (Paths.get("files/test11.txt")));
+//        System.out.println("Done!");
+//        Files.delete(Paths.get("files/test5.txt"));
+//        System.out.println("Done!");
+        Files.delete(Paths.get("files/M"));
         System.out.println("Done!");
     }
 }
