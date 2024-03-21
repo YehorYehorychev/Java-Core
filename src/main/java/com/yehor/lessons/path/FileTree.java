@@ -1,15 +1,14 @@
 package com.yehor.lessons.path;
 
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.FileVisitor;
-import java.nio.file.Path;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileTree {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        Path path = Paths.get("C:/Users/egory/IdeaProjects/JavaLessons/files/Folder");
+        Files.walkFileTree(path, new MyFileVisitor());
     }
 }
 
@@ -37,6 +36,5 @@ class MyFileVisitor implements FileVisitor<Path> {
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
         System.out.println("Exit from dir: " + dir);
         return FileVisitResult.CONTINUE;
-    }
     }
 }
