@@ -8,7 +8,7 @@ public class Regex2 {
     public static void main(String[] args) {
 //        String s1 = "ABDOP";
 //        Pattern pattern1 = Pattern.compile("AB[C-F]OP");
-        String s1 = "abcd abce abc5abcg6abch";
+        String s1 = "hello my name is Yehor!";
 //        Pattern pattern1 = Pattern.compile("\\d");
 //        Matcher matcher = pattern1.matcher(s1);
 //        Pattern pattern1 = Pattern.compile("\\D");
@@ -17,7 +17,7 @@ public class Regex2 {
 //        Matcher matcher = pattern1.matcher(s1);
 //        Pattern pattern1 = Pattern.compile("\\W");
 //        Matcher matcher = pattern1.matcher(s1);
-        Pattern pattern1 = Pattern.compile("\\w+");
+        Pattern pattern1 = Pattern.compile("\\w{5}");
         Matcher matcher = pattern1.matcher(s1);
 
 
