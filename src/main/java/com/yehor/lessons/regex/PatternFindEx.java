@@ -13,6 +13,7 @@ public class PatternFindEx {
 
         while (matcher.find()) {
             System.out.println("Full number: " + matcher.group());
+            System.out.println("Full number: " + matcher.group(0));
             System.out.println("Area code: " + matcher.group(1));
         }
     }
