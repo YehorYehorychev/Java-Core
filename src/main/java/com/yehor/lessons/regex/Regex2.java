@@ -6,11 +6,12 @@ import java.util.regex.Pattern;
 public class Regex2 {
 
     public static void main(String[] args) {
-        String s1 = "ABCD ABCE ABCFABCGABCH";
-        Pattern pattern1 = Pattern.compile("ABCD");
+        String s1 = "ABDOP";
+        Pattern pattern1 = Pattern.compile("AB[C-F]OP");
         Matcher matcher = pattern1.matcher(s1);
+
         while (matcher.find()) {
-            System.out.println(matcher.group());
+            System.out.println( matcher.group() + " " + "Position: " + matcher.start());
         }
     }
 }
