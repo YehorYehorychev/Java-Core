@@ -18,7 +18,10 @@ public class Regex1 {
 //            System.out.println(matcher.group());
 //        }
 //        Pattern pattern = Pattern.compile("\\b\\d{2}\\b");
-        Pattern pattern = Pattern.compile("\\w+@\\w+\\.(com)");
+//        Pattern pattern = Pattern.compile("\\w+@\\w+\\.(com)");
+//        Pattern pattern = Pattern.compile("\\w\\s+\\w");
+//        Pattern pattern = Pattern.compile("\\D{2,6}");
+        Pattern pattern = Pattern.compile("\\w+(AB)?");
         Matcher matcher = pattern.matcher(s);
         while (matcher.find()) {
             System.out.println(matcher.group());
