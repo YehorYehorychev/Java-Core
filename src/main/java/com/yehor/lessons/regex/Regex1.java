@@ -11,9 +11,14 @@ public class Regex1 {
                 "Aaron Paul, USA, New-York, 50th ave ST, 5011, apt 34" +
                 "email: ddffw@email.com, ZIP: 45255 CellPhone: +184535669";
 
-        Pattern pattern = Pattern.compile("email:");
+//        Pattern pattern = Pattern.compile("email:");
+//        Matcher matcher = pattern.matcher(s);
+//
+//        while (matcher.find()) {
+//            System.out.println(matcher.group());
+//        }
+        Pattern pattern = Pattern.compile("\\w+");
         Matcher matcher = pattern.matcher(s);
-
         while (matcher.find()) {
             System.out.println(matcher.group());
         }
