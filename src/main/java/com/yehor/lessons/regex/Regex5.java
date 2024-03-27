@@ -16,6 +16,5 @@ public class Regex5 {
         while (matcher.find()) {
             System.out.println(matcher.group());
         }
-
     }
 }
