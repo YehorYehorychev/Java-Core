@@ -8,7 +8,23 @@ public class Enum1 {
 }
 
 enum WeekDays {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    MONDAY("bad"),
+    TUESDAY("bad"),
+    WEDNESDAY("so-so"),
+    THURSDAY("good"),
+    FRIDAY("good"),
+    SATURDAY("awesome"),
+    SUNDAY("awesome");
+
+    private String mood;
+
+    WeekDays(String mood) {
+        this.mood = mood;
+    }
+
+    public String getMood() {
+        return mood;
+    }
 }
 
 class Today {
