@@ -8,4 +8,11 @@ public class ReflectionAPIEx {
         Class<User> userClass1 = User.class;
         System.out.println(userClass == userClass1);
     }
+//    private class Test1 {
+//
+//    }
+//    private  enum Test2 {
+//        ONE, TWO;
+//    }
 }
+
