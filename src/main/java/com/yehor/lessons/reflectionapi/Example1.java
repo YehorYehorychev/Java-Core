@@ -1,9 +1,6 @@
 package com.yehor.lessons.reflectionapi;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.Arrays;
 
 public class Example1 {
@@ -40,5 +37,17 @@ public class Example1 {
         System.out.println("--------------------------------------");
         Method setSalary = employeeClass.getMethod("setSalary", double.class);
         System.out.println(setSalary.getReturnType() + " and " + Arrays.toString(setSalary.getParameterTypes()));
+        System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
+        Constructor constructor = employeeClass.getConstructor(int.class, String.class, String.class);
+        System.out.println("Constructor has: " + constructor.getParameterCount() + " parameters, their type are: " + Arrays.toString(constructor.getParameterTypes()));
+        System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
+        System.out.println("--------------------------------------");
+        Constructor[] constructors = employeeClass.getConstructors();
+        for (Constructor constructor1 : constructors) {
+            System.out.println(Arrays.toString(constructor1.getParameterTypes()));
+        }
     }
 }
