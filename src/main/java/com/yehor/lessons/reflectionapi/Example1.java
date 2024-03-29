@@ -2,11 +2,12 @@ package com.yehor.lessons.reflectionapi;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class Example1 {
 
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, NoSuchMethodException {
         Class employeeClass = Class.forName("com.yehor.lessons.reflectionapi.Employee");
 //        Class employeeClass2 = Employee.class;
 //        Employee em = new Employee();
@@ -22,5 +23,13 @@ public class Example1 {
         for (Field field : allDeclaredFields) {
             System.out.println("Field: " + field);
         }
+        System.out.println("--------------------------------------");
+        Method[] methods = employeeClass.getDeclaredMethods();
+        for (Method method : methods) {
+            System.out.println("Method: " + method);
+        }
+        System.out.println("--------------------------------------");
+        Method setSalary = employeeClass.getMethod("setSalary", double.class);
+        System.out.println(setSalary.getReturnType() + " and " + Arrays.toString(setSalary.getParameterTypes()));
     }
 }
