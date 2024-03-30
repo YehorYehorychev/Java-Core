@@ -12,5 +12,8 @@ public class Example3 {
 
         double salaryValue = (double) field.get(employee);
         System.out.println(salaryValue);
+
+        field.set(employee, 2000);
+        System.out.println(employee);
     }
 }
