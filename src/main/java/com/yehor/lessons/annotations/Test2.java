@@ -17,7 +17,7 @@ public class Test2 {
     }
 }
 
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @interface SmartPhone {
     String OS() default "Android";
