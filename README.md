@@ -3,7 +3,7 @@
 
 Dive into the depths of Java Core with me! This repository is a treasure trove of Java knowledge, covering everything from the basics to the advanced, including multithreading, streams, lambdas, and the mighty Collection Framework. 💡
 
-Here's what you'll find:
+Here's what you'll find: ➡️
 
 📘 Java Core: Explore the fundamentals of Java programming, from variables to control structures. Master the essentials!
 
