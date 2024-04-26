@@ -1,4 +1,4 @@
-#  Java-Core Repository!
+#  Java-Core Playground Repository!
 🚀 Welcome to my Java Mastery Repository! 🎓
 
 Dive into the depths of Java Core with me! This repository is a treasure trove of Java knowledge, covering everything from the basics to the advanced, including multithreading, streams, lambdas, and the mighty Collection Framework. 💡
